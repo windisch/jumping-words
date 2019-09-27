@@ -4,9 +4,15 @@ from text import (
     Text
 )
 import unittest
+import numpy as np
+
 
 
 class TestToken(unittest.TestCase):
+
+    @classmethod
+    def setUpClass(self):
+        np.random.seed(31)
 
     def test_get_string(self):
         token = Token("Hallo")
@@ -26,6 +32,10 @@ class TestToken(unittest.TestCase):
 
 class TestLine(unittest.TestCase):
 
+    @classmethod
+    def setUpClass(self):
+        np.random.seed(31)
+
     def setUp(self):
         self.line = "This is awesome python code"
 
@@ -40,6 +50,10 @@ class TestLine(unittest.TestCase):
 
 
 class TestText(unittest.TestCase):
+
+    @classmethod
+    def setUpClass(self):
+        np.random.seed(31)
 
     def setUp(self):
         self.text = "This is awesome python code.\nIt is free of bugs"
