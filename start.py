@@ -67,5 +67,4 @@ if __name__ == '__main__':
     with open(args.filepath, 'r') as fh:
         text = "".join(fh.readlines())
 
-    app = WordShuffle(text)
-    app.start()
+    WordShuffle(text).start()
