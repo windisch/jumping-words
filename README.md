@@ -3,7 +3,7 @@
 Let words in a text jump around to show how hard reading is when
 suffering from [dyslexia](https://en.wikipedia.org/wiki/Dyslexia).
 
-
+![demo](./example.gif)
 
 
 ## Install
@@ -28,14 +28,12 @@ python start.py /path/to/text
 
 ## Example
 
-After executing
+Invoke
 
 ```bash
 python start.py example_text
 ```
-
-a window opens showing you something like that:
-![demo](./example.gif)
+to see the demo as displayed above.
 
 
 ## Acknowledgements
