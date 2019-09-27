@@ -36,3 +36,12 @@ python start.py example_text
 
 a window opens showing you something like that:
 ![demo](./example.gif)
+
+
+## Acknowledgements
+
+This project was inspired by the JavaScript
+[demonstration](http://geon.github.io/programming/2016/03/03/dsxyliea)
+of [geon](https://github.com/geon) and my wife, who wants to have a
+similar tool with more control over the "jumping" and the
+presentation.
