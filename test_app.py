@@ -1,6 +1,6 @@
 from text import (
     Token,
-    Line,
+    Sentence,
     Text
 )
 import unittest
@@ -30,23 +30,23 @@ class TestToken(unittest.TestCase):
         self.assertNotEqual(word_shuffled, word)
 
 
-class TestLine(unittest.TestCase):
+class TestSentence(unittest.TestCase):
 
     @classmethod
     def setUpClass(self):
         np.random.seed(31)
 
     def setUp(self):
-        self.line = "This is awesome python code"
+        self.sentence = "This is awesome python code"
 
     def test_get_string(self):
-        line = Line(self.line)
-        self.assertEqual(line.get_string(), self.line)
+        sentence = Sentence(self.sentence)
+        self.assertEqual(sentence.get_string(), self.sentence)
 
     def test_shuffle(self):
-        line = Line(self.line)
-        line.shuffle()
-        self.assertNotEqual(line.get_string(), self.line)
+        sentence = Sentence(self.sentence)
+        sentence.shuffle()
+        self.assertNotEqual(sentence.get_string(), self.sentence)
 
 
 class TestText(unittest.TestCase):

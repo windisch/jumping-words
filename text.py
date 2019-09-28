@@ -4,7 +4,10 @@ from functools import reduce
 
 class Token(object):
     """
-    TODO: Deal with special signs
+    A single token, like a word.
+
+    Args:
+        token (string): The input token
     """
     special_chars = [',', '.', '!', '"', ':']
 
@@ -17,6 +20,9 @@ class Token(object):
         self.idx = np.arange
 
     def shuffle(self):
+        """
+        Swaps to randomly selected subsequent letters in the token
+        """
 
         if self.length <= 3:
             return
@@ -26,14 +32,27 @@ class Token(object):
         self.letters[i], self.letters[i+1] = self.letters[i+1], self.letters[i]
 
     def get_string(self):
+        """
+        Concatenate the letters in the current order and returns them as string.
+
+        Returns:
+            string: A concatenation of the current order of the letters
+        """
         return reduce(lambda x, y: "{}{}".format(x, y), self.letters)
 
 
-class Line(object):
+class Sentence(object):
+    """
+    A sequence of tokens.
 
-    def __init__(self, line):
+    Args:
+        sentence (string): A
 
-        words = line.split(" ")
+    """
+
+    def __init__(self, sentence):
+
+        words = sentence.split(" ")
         self.tokens = [Token(word) for word in words if len(word) > 0]
         self.length = len(self.tokens)
 
@@ -55,15 +74,21 @@ class Line(object):
 
 
 class Text(object):
+    """
+    Sequence of sentences.
+
+    Args:
+        text (string): A text.
+    """
 
     def __init__(self, text):
-        lines = text.split("\n")
-        self.lines = [Line(l) for l in lines]
-        self.lenght = len(self.lines)
+        sentences = text.split("\n")
+        self.sentenes = [Sentence(s) for s in sentences]
+        self.lenght = len(self.sentenes)
 
     def shuffle(self, n=2):
         for i in range(self.lenght):
-            self.lines[i].shuffle(n=n)
+            self.sentenes[i].shuffle(n=n)
 
     def get_string(self):
-        return "\n".join([line.get_string() for line in self.lines])
+        return "\n".join([s.get_string() for s in self.sentenes])
