@@ -33,7 +33,7 @@ Invoke
 ```bash
 python start.py example_text
 ```
-to see the demo as displayed above.
+to see the demo displayed above.
 
 
 ## Acknowledgements
