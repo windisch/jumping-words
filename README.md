@@ -1,4 +1,4 @@
-# jumpying words
+# jumping words
 
 Let words in a text jump around to show how hard reading is when
 suffering from [dyslexia](https://en.wikipedia.org/wiki/Dyslexia).

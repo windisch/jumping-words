@@ -6,7 +6,7 @@ class Token(object):
     """
     TODO: Deal with special signs
     """
-    special_chars = [',', '.', '!']
+    special_chars = [',', '.', '!', '"', ':']
 
     def __init__(self, token):
         self.letters = np.fromiter(token, dtype='<U1')
