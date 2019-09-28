@@ -1,7 +1,7 @@
 # jumping words
 
-Let words in a text jump around to show how hard reading is when
-suffering from [dyslexia](https://en.wikipedia.org/wiki/Dyslexia).
+Let wrods in a txet jmup anroud to gte a felineg on how hrda raeding is wenh
+sfufreing from [dyslexia](https://en.wikipedia.org/wiki/Dyslexia).
 
 ![demo](./example.gif)
 
@@ -24,7 +24,7 @@ Run
 ```bash
 python start.py /path/to/text
 ```
-
+to suffle the words of your text around in a seperate windows.
 
 ## Example
 
