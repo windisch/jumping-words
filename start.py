@@ -16,27 +16,28 @@ class WordShuffle(object):
 
         self.fontsize = fontsize
         self.jump_time = jump_time
-
         self.text = Text(text)
 
+        self.init()
+
+    def start(self):
+        self.root.mainloop()
+
+    def init(self):
         self.root = tk.Tk()
         self.label = tk.Label(
             text=self.text.get_string(),
             font=('Nimbus Mono L', self.fontsize),
         )
         self.label.pack()
-        self.update()
 
-    def start(self):
-        self.root.mainloop()
+        self.root.after(2000, self.update)
 
     def update(self):
-
         self.text.shuffle()
 
         self.label.configure(text=self.text.get_string())
         self.root.after(self.jump_time, self.update)
-
 
 if __name__ == '__main__':
 
