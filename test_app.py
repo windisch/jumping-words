@@ -56,7 +56,7 @@ class TestText(unittest.TestCase):
         np.random.seed(31)
 
     def setUp(self):
-        self.text = "This is awesome python code.\nIt is free of bugs"
+        self.text = "This is awesome python code. It is free of bugs"
 
     def test_get_string(self):
         text = Text(self.text)
